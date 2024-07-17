@@ -1,0 +1,27 @@
+file structure
+SAFE_SOURCEV2
+|
+|--INSTANCE/
+|    |-CONFIG.PY
+|    |-schema.sql
+|
+|--SAFE_SOURCEV2
+|      |
+|      |_ __init__.PY
+|      |
+|      |- db.py
+|      |-some_module.py
+|      |-templates
+|      |     html
+|      |-static
+|         |_css
+|         |-js
+|         |-logo
+|
+|
+|------run.py
+|------.gitignore
+|------run.py
+
+--------------------------------------------------------------------------------------------------------------
+flask --app safe_source init-db
