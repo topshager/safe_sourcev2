@@ -29,29 +29,12 @@ def create_app(test_config=None):
     def index():
         return render_template('index.html')
 
-    @app.route('/contact',methods=('GET','POST'))
-    def contact():
-            if request.method == 'POST':
-                name    =request.form['name']
-                surname =request.form['surname']
-                cell_no =request.form['cell_no']
-                email   =request.form['email']
-                subject =request.form['subject']
-                message =request.form['message']
-                db = get_db()
-                error = None
-                user = db.execute(
-                    'INSERT INTO contact_info '
-                )
 
-
-        render_template('contact.html')
-
-    @app.route('service')
+    @app.route('/service')
     def service():
         return render_template('service.html')
 
-    @app.route('about')
+    @app.route('/about')
     def about():
         return render_template('about.html')
 

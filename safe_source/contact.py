@@ -29,4 +29,4 @@ def contact_form():
         except db.IntegrityError:
            error = f"{email} has already been used."
     flash(error)
-  return render_template('templates/contact.html')
+  return render_template('contact.html')
