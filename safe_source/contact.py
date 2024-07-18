@@ -8,7 +8,7 @@ from safe_source.db  import get_db
 bp  = Blueprint('contact',__name__,url_prefix='/contact')
 
 
-@dbp.route('/contact',methods=('GET','POST'))
+@bp.route('/contact',methods=('GET','POST'))
 def contact_form():
   if request.method == 'POST':
     name= request.form['name']
