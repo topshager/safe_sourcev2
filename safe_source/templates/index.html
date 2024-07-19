@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Safe Source Security</title>
-    <link rel="stylesheet" href="/Users/joshuasingrew/Documents/GitHub/safe_source/safe-source-secure-/styles/styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
 </head>
 <body>
     <!-- Header Section -->
     <header id="Header">
         <div class="logo">
-            <img src="/Users/joshuasingrew/Documents/GitHub/safe_source/safe_sourcev2/safe_source/static/images/[removal.ai]_49a03c64-c451-4482-b760-797afd573b3f-whatsapp-image-2024-02-17-at-19-39-10-12-copy.png" alt="Safe Source Security Logo">
+            <img src="{{ url_for('static', filename='images/[removal.ai]_49a03c64-c451-4482-b760-797afd573b3f-whatsapp-image-2024-02-17-at-19-39-10-12-copy.png') }}" alt="Safe Source Security Logo">
             <h2>Safe Source Security</h2>
         </div>
 
         <nav>
-            <a href="{{url_for('index')}}">Home</a>
-            <a href="{{url_for('service')}}">Services</a>
-            <a href="{{url_for('contact.contact')}}">About Us</a>
-            <a href="contact.html">Contact</a>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('service') }}">Services</a>
+            <a href="{{ url_for('about') }}">About Us</a>
+            <a href="{{ url_for('contact.contact_form') }}">Contact</a>
         </nav>
     </header>
 
@@ -27,7 +27,7 @@
         <div class="trust-us">
             <h1>Your Trusted Security Solutions Provider</h1>
             <p>Protecting tomorrow today.</p>
-            <a href="contact.html" class="cta-button">Get a Quote</a>
+            <a href="{{ url_for('contact.contact_form') }}" class="cta-button">Get a Quote</a>
         </div>
     </section>
 
@@ -36,15 +36,15 @@
         <h2><strong>Our Services</strong></h2>
         <div class="card">
             <div class="service">
-                <img class="img" src="/Users/joshuasingrew/Documents/GitHub/safe_source/safe_sourcev2/safe_source/static/images/estate gate.jpeg" alt="Residential Security" style="width:100%">
+                <img class="img" src="{{ url_for('static', filename='images/estate gate.jpeg') }}" alt="Residential Security" style="width:100%">
                 <p>Residential Security</p>
             </div>
             <div class="service">
-                <img class="img" src="/Users/joshuasingrew/Documents/GitHub/safe_source/safe_sourcev2/safe_source/static/images/industrial-buildings-scaled-e1672672681592-1200x900.jpg" alt="Industrial Security" style="width:100%">
+                <img class="img" src="{{ url_for('static', filename='images/industrial-buildings-scaled-e1672672681592-1200x900.jpg') }}" alt="Industrial Security" style="width:100%">
                 <p>Industrial Security</p>
             </div>
             <div class="service">
-                <img class="img" src="/Users/joshuasingrew/Documents/GitHub/safe_source/safe_sourcev2/safe_source/static/images/b_walmer_park_shopping_centre8.jpg" alt="Commercial Security" style="width:100%">
+                <img class="img" src="{{ url_for('static', filename='images/b_walmer_park_shopping_centre8.jpg') }}" alt="Commercial Security" style="width:100%">
                 <p>Commercial Security</p>
             </div>
         </div>
@@ -54,7 +54,7 @@
     <section class="about-us">
         <h2>About Us</h2>
         <p>We are a leading security company providing tailored solutions to protect homes and businesses.</p>
-        <a href="about.html" class="cta-button">Learn More</a>
+        <a href="{{ url_for('about') }}" class="cta-button">Learn More</a>
     </section>
 
     <!-- Contact Section -->
