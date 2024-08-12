@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS contact_info;
+DROP TABLE IF EXISTS ;
 CREATE TABLE contact_info (
   Name TEXT NOT NULL,
   surname Text NOT NULL,
@@ -7,3 +7,5 @@ CREATE TABLE contact_info (
   subject TEXT NOT NULL,
   message TEXT NOT NULL
   );
+
+SELECT * FROM contact_info;

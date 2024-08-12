@@ -41,60 +41,51 @@
         }
         input[type="submit"]:hover {
             background-color: #218838;
-
         }
+
         /* Header Styles */
-header
-{
-  display: flex;
-  width:100%;
-  height: 200px;
-  background-color: white;
-
-}
-.logo h2
-{
-  margin: 20px;
-  margin-left: 10px;
-}
-.logo img{
-  height: 100px;
-  width: 100px;
-}
-
-nav{
-  text-decoration: none;
-  padding-top: 150px;
-  padding-left: 700px;
-}
-nav a{
-
-  font-size: x-large;
-  text-decoration: none;
-  color: black;
-  margin-right: 30px;
-}
-
-
+        header {
+            display: flex;
+            width: 100%;
+            height: 200px;
+            background-color: white;
+        }
+        .logo h2 {
+            margin: 20px;
+            margin-left: 10px;
+        }
+        .logo img {
+            height: 100px;
+            width: 100px;
+        }
+        nav {
+            padding-top: 150px;
+            padding-left: 700px;
+        }
+        nav a {
+            font-size: x-large;
+            text-decoration: none;
+            color: black;
+            margin-right: 30px;
+        }
     </style>
 </head>
 <header id="Header">
-<div class="logo">
-  <img src="/Users/joshuasingrew/Documents/GitHub/safe_source/safe_sourcev2/safe_source/static/images/[removal.ai]_49a03c64-c451-4482-b760-797afd573b3f-whatsapp-image-2024-02-17-at-19-39-10-12-copy.png" alt="Safe Source Security Logo">
-  <h2>Safe Source Security</h2>
-</div>
-
-<nav>
-  <a href="{{ url_for('index') }}">Home</a>
-  <a href="{{ url_for('service') }}">Services</a>
-  <a href="{{ url_for('about') }}">About Us</a>
-  <a href="{{ url_for('contact.contact_form') }}">Contact</a>
-</nav>
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/[removal.ai]_49a03c64-c451-4482-b760-797afd573b3f-whatsapp-image-2024-02-17-at-19-39-10-12-copy.png') }}" alt="Safe Source Security Logo">
+        <h2>Safe Source Security</h2>
+    </div>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('service') }}">Services</a>
+        <a href="{{ url_for('about') }}">About Us</a>
+        <a href="{{ url_for('contact.contact_form') }}">Contact</a>
+    </nav>
 </header>
 <body>
     <div class="container">
         <h2>Contact Us</h2>
-        <form action="/submit_contact_form" method="post">
+        <form action="{{ url_for('contact.contact_form') }}" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
